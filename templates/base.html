@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Baza dannih</title>
+</head>
+<body>
+
+{% block content %} <h3> Familia / Ima / Data_rozdenia </h3>
+    {% for post in news %}
+	  <div class="id">{{ post.id }}   {{ post.formated_date() }}</div>
+     {% endfor %}
+{% endblock %}
+<hr />
+{% block content2 %}<h3> Obrazovan / Specialnost / Stazh</h3>
+    {% for post in news2 %}
+        <div class="id">{{ post.id }}  :  {{ post.obrazovan }} /
+              {{ post.specialnost}}  /  {{ post.stazh}}</div>
+        
+    {% endfor %}
+{% endblock %}
+<hr />
+
+{% block content3 %}<h3> Dolzhnost  /   Zarplata</h3>
+    {% for post in news3 %}
+        <div class="id">{{ post.id }} :   
+           {{ post.dolzhnost}} / {{ post.zarplata}}</</div>
+           </div>
+    {% endfor %}
+{% endblock %}
+
+
+</body>
+</html>
